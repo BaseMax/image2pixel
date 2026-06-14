@@ -19,6 +19,20 @@
       <input id="fileInput" type="file" accept="image/*" class="hidden" />
     </div>
 
+    <!-- Controls -->
+    <div class="mt-6">
+      <label class="block mb-2 text-sm text-gray-300">Channel Mode</label>
+      <select id="channelMode"
+        class="bg-gray-900 border border-gray-700 p-2 rounded w-full">
+        <option value="rgba">RGBA</option>
+        <option value="rgb">RGB</option>
+        <option value="r">R</option>
+        <option value="g">G</option>
+        <option value="b">B</option>
+        <option value="a">A</option>
+      </select>
+    </div>
+
     <!-- Preview -->
     <div class="mt-6">
       <img id="preview" class="max-h-64 rounded-lg hidden border border-gray-700"/>
@@ -33,7 +47,7 @@
       </div>
 
       <div>
-        <h2 class="font-semibold mb-2">2. Pixels Buffer (Binary Array)</h2>
+        <h2 class="font-semibold mb-2">2. Pixels Buffer</h2>
         <textarea id="outPixels" class="w-full h-40 bg-gray-900 p-2 rounded"></textarea>
       </div>
 
@@ -43,7 +57,7 @@
       </div>
 
       <div>
-        <h2 class="font-semibold mb-2">4. CSV Pixels (R,G,B,A...)</h2>
+        <h2 class="font-semibold mb-2">4. CSV Pixels</h2>
         <textarea id="outCSV" class="w-full h-40 bg-gray-900 p-2 rounded"></textarea>
       </div>
 
