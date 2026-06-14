@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Pixel Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+  <div class="max-w-5xl mx-auto p-6">
+
+    <h1 class="text-2xl font-bold mb-6">🧪 Image Pixel Lab</h1>
+
+    <!-- Drop zone -->
+    <div id="dropzone"
+      class="border-2 border-dashed border-gray-600 rounded-xl p-10 text-center cursor-pointer hover:border-blue-400 transition">
+      <p class="text-gray-300">Drag & drop an image here or click to select</p>
+      <input id="fileInput" type="file" accept="image/*" class="hidden" />
+    </div>
+
+    <!-- Preview -->
+    <div class="mt-6">
+      <img id="preview" class="max-h-64 rounded-lg hidden border border-gray-700"/>
+    </div>
+
+    <!-- Outputs -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+
+      <div>
+        <h2 class="font-semibold mb-2">1. Base64 Image</h2>
+        <textarea id="outBase64" class="w-full h-40 bg-gray-900 p-2 rounded"></textarea>
+      </div>
+
+      <div>
+        <h2 class="font-semibold mb-2">2. Pixels Buffer (Binary Array)</h2>
+        <textarea id="outPixels" class="w-full h-40 bg-gray-900 p-2 rounded"></textarea>
+      </div>
+
+      <div>
+        <h2 class="font-semibold mb-2">3. Base64 of Pixels Buffer</h2>
+        <textarea id="outPixelsB64" class="w-full h-40 bg-gray-900 p-2 rounded"></textarea>
+      </div>
+
+      <div>
+        <h2 class="font-semibold mb-2">4. CSV Pixels (R,G,B,A...)</h2>
+        <textarea id="outCSV" class="w-full h-40 bg-gray-900 p-2 rounded"></textarea>
+      </div>
+
+      <div class="md:col-span-2">
+        <h2 class="font-semibold mb-2">5. Base64 CSV</h2>
+        <textarea id="outCSVb64" class="w-full h-40 bg-gray-900 p-2 rounded"></textarea>
+      </div>
+
+    </div>
+
+    <canvas id="canvas" class="hidden"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
